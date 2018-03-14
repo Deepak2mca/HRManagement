@@ -10,7 +10,9 @@ namespace Employee.Models
     {
         public int EmployeeID { get; set; }
         public string EmployeeName { get; set; }
+        //employee manager ID
         public int ManagerId { get; set; }
+       //collection of all under employees
         public HashSet<int> TopLowerEmployeeIDs{ get; set; }
     }
 }
