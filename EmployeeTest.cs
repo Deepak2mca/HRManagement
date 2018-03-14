@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -53,7 +53,7 @@ namespace Employee.Tests
             {
                 EmployeeID = 3,
                 EmployeeName = "Tom miller3",
-                ManagerId = 0,
+                ManagerId = 4,
                 TopLowerEmployeeIDs = new HashSet<int> { }
             };
             var emp2 = new Employee.Models.Employee()
@@ -68,7 +68,7 @@ namespace Employee.Tests
             {
                 EmployeeID = 5,
                 EmployeeName = "Tom miller5",
-                ManagerId = 0,
+                ManagerId = 4,
                 TopLowerEmployeeIDs = new HashSet<int> { }
             };
 
@@ -83,10 +83,8 @@ namespace Employee.Tests
             // employee 3 and 5 will removed after execution of function.
             objEmplyeeCRUD.DeleteAllEmployeeByManagerId(4);
 
-            //assert
-
-
-
+            //assert is pending
+          
 
             
         }
@@ -128,8 +126,8 @@ namespace Employee.Tests
             // now I am changing employee "Tom miller3" is reporting to "Tom miller5"
             objEmplyeeCRUD.ChangingReportingManager(4, 3, 5);
 
-
-
+            //assert
+            //assert is pending 
 
         }
 
@@ -168,10 +166,12 @@ namespace Employee.Tests
             objEmplyeeCRUD.AddUpdateEmployee(emp2);
             objEmplyeeCRUD.AddUpdateEmployee(emp3);
 
-            
+            //employeeIds 1,2,3,4 get selected
             List<Employee.Models.Employee> lst = objEmplyeeCRUD.GetEmployeeListByManagerId(5);
 
-           
+            //assert
+            //assert is pending
+            //all hirarchical employee will get selected.
             
         }
     }
